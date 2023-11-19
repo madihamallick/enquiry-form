@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import SideNavbar from "@/components/SideNavbar";
-import TopNavbar from "@/components/TopNavbar";
-import StepA from "@/components/StepA";
-import StepB from "@/components/StepB";
-import StepC from "@/components/StepC";
-import StepD from "@/components/StepD";
-import StepFinal from "@/components/StepFinal";
-import Card from "@/components/Card";
+import React, { useState } from "react";
+import SideNavbar from "./SideNavbar";
+import TopNavbar from "./TopNavbar";
+import StepA from "./StepA";
+import StepB from "./StepB";
+import StepC from "./StepC";
+import StepD from "./StepD";
+import StepFinal from "./StepFinal";
+import Card from "./Card";
 
 const initialFormData = {
   name: "",
@@ -44,7 +44,7 @@ const sideItemObject = {
   "Interview Availability":
     "Start creating a new form with the wide options of fields available",
 };
-const page = () => {
+const EnquiryForm = () => {
   const [step, setStep] = useState("Details Collection");
   const [formData, setFormData] = useState(initialFormData);
 
@@ -84,10 +84,6 @@ const page = () => {
       setStep("Final");
     }
   };
-
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
 
   const renderSideNavItems = () => {
     if (step === "Final") {
@@ -208,4 +204,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default EnquiryForm;
