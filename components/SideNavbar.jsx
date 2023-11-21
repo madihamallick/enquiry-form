@@ -4,7 +4,7 @@ import Card from "../components/Card";
 const SideNavbar = ({renderSideNavItems}) => {
   return (
     <div className="flex-col flex border-r-2 bg-white">
-      <div className="lg:flex md:w-9/12 md:flex-col hidden">
+      <div className="lg:flex md:flex-col hidden">
         <div className="space-y-4">
           <div className="mx-6">
             <Card

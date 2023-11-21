@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SideNavbar from "./SideNavbar";
 import TopNavbar from "./TopNavbar";
 import StepA from "./StepA";
@@ -30,7 +30,7 @@ const initialFormData = {
   interviewdate: "",
   interviewtime: "",
   timezone: "",
-  interviewmedium: ""
+  interviewmedium: "",
 };
 
 const stepsArray = ["Form Selection", "Set up", "Form Creation", "Review"];
@@ -47,6 +47,10 @@ const sideItemObject = {
 const EnquiryForm = () => {
   const [step, setStep] = useState("Details Collection");
   const [formData, setFormData] = useState(initialFormData);
+
+  useEffect(()=>{
+    console.log(formData)
+  },[formData])
 
   const handleNextStep = () => {
     if (step === "Details Collection") setStep("Document Collection");
@@ -108,7 +112,7 @@ const EnquiryForm = () => {
     return (
       <section className="flex justify-center items-center">
         {stepsArray.map((item, index) => (
-          <>
+          <React.Fragment key={index}>
             <div
               key={item}
               className={`w-8 h-8 flex justify-center items-center border-2 border-gray-200 rounded-full cursor-pointer ${
@@ -130,14 +134,14 @@ const EnquiryForm = () => {
                 />
               </svg>
             </div>
-            <span className="mx-3">{item}</span>
+            <span className="mx-3 text-sm">{item}</span>
             {index < stepsArray.length - 1 && (
               <hr
                 key={`line-${index}`}
                 className="border border-greylight ml-5 mr-10 w-[10rem]"
               />
             )}
-          </>
+          </React.Fragment>
         ))}
       </section>
     );
@@ -148,14 +152,14 @@ const EnquiryForm = () => {
       <TopNavbar renderTopStepNumbers={renderTopStepNumbers} />
       <div className="flex">
         <SideNavbar renderSideNavItems={renderSideNavItems} />
-        <div className="flex-1 w-[600px] max-w-full md:px-24 py-14 mx-auto h-[90vh] overflow-y-scroll">
-          <h2 className="font-sans text-2xl">PInterview Availability</h2>
+        <div className="flex-1 w-[600px] max-w-full md:px-14 py-8 mx-auto h-[90vh] overflow-y-scroll">
+          <h2 className="font-sans text-xl">Interview Availability</h2>
           <span>
             You will be able to customize the fields in the later stage
           </span>
           <div className="border border-gray-200 my-6 bg-white">
-            <div className="bg-normalblue bg-opacity-20 p-10">
-              <h2 className="font-sans text-2xl">Name of the Enquiry Form</h2>
+            <div className="bg-normalblue bg-opacity-20 p-6">
+              <h2 className="font-sans text-xl">Name of the Enquiry Form</h2>
               <h4 className="text-sm text-gray-700">
                 One line description of the form
               </h4>
@@ -163,7 +167,7 @@ const EnquiryForm = () => {
                 Provide the following information to process your application
               </span>
             </div>
-            <div className="p-10">
+            <div className="p-6">
               {step === "Details Collection" ? (
                 <StepA
                   formData={formData}
@@ -195,7 +199,7 @@ const EnquiryForm = () => {
                   handleSubmitFormData={handleSubmitFormData}
                 />
               ) : null}
-              {step === "Final" ? <StepFinal /> : null}
+              {step === "Final" ? <StepFinal formData={formData} /> : null}
             </div>
           </div>
         </div>

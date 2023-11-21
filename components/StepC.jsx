@@ -6,7 +6,7 @@ const StepC = ({
 }) => {
   return (
     <div className="w-8/12 mx-auto">
-      <div className="mb-10">
+      <div className="mb-8">
         <label>
           1. Tell me about a time you were asked to do something you had never
           done before. How did you react? What did you learn?
@@ -17,14 +17,14 @@ const StepC = ({
           value={formData.howyoureact}
           rows={3}
           placeholder="Enter a description for the long answer"
-          className="w-full outline-none border border-gray-400 px-5 mt-2 py-2.5 rounded-md focus:border-blue-600"
+          className="w-full outline-none border border-gray-400 px-5 mt-2 py-2 rounded-md focus:border-blue-600"
           onChange={(e) => handleChangeInput(e)}
         />
         <span className="text-[10px] text-gray-500 float-right">
           300 word limit
         </span>
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>
           2. Tell me about the last time something significant didn’t go
           according to plan at work. What was your role? What was the outcome?
@@ -35,14 +35,14 @@ const StepC = ({
           value={formData.yourrole}
           rows={3}
           placeholder="Enter a description for the long answer"
-          className="w-full outline-none border border-gray-400 px-5 mt-2 py-2.5 rounded-md focus:border-blue-600"
+          className="w-full outline-none border border-gray-400 px-5 mt-2 py-2 rounded-md focus:border-blue-600"
           onChange={(e) => handleChangeInput(e)}
         />
         <span className="text-[10px] text-gray-500 float-right">
           300 word limit
         </span>
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>
           3. What are the three things that are most important to you in a job?{" "}
         </label>
@@ -52,7 +52,7 @@ const StepC = ({
           value={formData.importanttoyou}
           rows={3}
           placeholder="Enter a description for the long answer"
-          className="w-full outline-none border border-gray-400 px-5 mt-2 py-2.5 rounded-md focus:border-blue-600"
+          className="w-full outline-none border border-gray-400 px-5 mt-2 py-2 rounded-md focus:border-blue-600"
           onChange={(e) => handleChangeInput(e)}
         />
         <span className="text-[10px] text-gray-500 float-right">

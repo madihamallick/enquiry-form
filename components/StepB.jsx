@@ -6,7 +6,7 @@ const StepB = ({
 }) => {
   return (
     <div className="w-8/12 mx-auto">
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">
           1. 10th Marksheet<span className="text-red-500">*</span>
         </label>
@@ -21,7 +21,7 @@ const StepB = ({
         />
       </div>
 
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">
           2. 12th Marksheet<span className="text-red-500">*</span>
         </label>
@@ -35,7 +35,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">
           3. Graduation Marksheet<span className="text-red-500">*</span>
         </label>
@@ -49,7 +49,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">4. Post Graduation Marksheet</label>
         <span className="absolute z-10 mx-6 mt-2">
           <img src="/assets/clip.png" className="w-8 opacity-50" />
@@ -61,7 +61,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">
           5. Offer Letter<span className="text-red-500">*</span>
         </label>
@@ -75,7 +75,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">
           6. Salary Slips<span className="text-red-500">*</span>
         </label>
@@ -89,7 +89,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">
           7. Bank Statement<span className="text-red-500">*</span>
         </label>
@@ -103,7 +103,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">8. Increment Letter (if any)</label>
         <span className="absolute z-10 mx-6 mt-2">
           <img src="/assets/clip.png" className="w-8 opacity-50" />
@@ -115,7 +115,7 @@ const StepB = ({
           onChange={(e) => handleChangeInput(e)}
         />
       </div>
-      <div className="mb-10 relative">
+      <div className="mb-8 relative">
         <label className="block">9. Others (if any)</label>
         <span className="absolute z-10 mx-6 mt-2">
           <img src="/assets/clip.png" className="w-8 opacity-50" />

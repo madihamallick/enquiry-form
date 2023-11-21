@@ -6,7 +6,7 @@ const StepD = ({
 }) => {
   return (
     <div className="w-8/12 mx-auto">
-      <div className="mb-10">
+      <div className="mb-8">
         <label>
           2. Email<span className="text-red-500">*</span>
         </label>
@@ -16,10 +16,10 @@ const StepD = ({
           value={formData.email}
           onChange={(e) => handleChangeInput(e)}
           placeholder="Example - userid@gmail.com"
-          className="w-full outline-none border border-gray-400 px-5 py-2.5 rounded-md focus:border-blue-600"
+          className="w-full outline-none border border-gray-400 px-5 py-2 rounded-md focus:border-blue-600"
         />
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>2. Location</label>
         <div>
           <input
@@ -28,11 +28,11 @@ const StepD = ({
             name="location"
             value={formData.location}
             onChange={(e) => handleChangeInput(e)}
-            className="w-full outline-none border border-gray-400 px-5 py-2.5 rounded-md focus:border-blue-600"
+            className="w-full outline-none border border-gray-400 px-5 py-2 rounded-md focus:border-blue-600"
           />
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>3. Interview Date</label>
         <div>
           <input
@@ -40,11 +40,11 @@ const StepD = ({
             name="interviewdate"
             value={formData.interviewdate}
             onChange={(e) => handleChangeInput(e)}
-            className="outline-none border border-gray-400 px-5 py-2.5 rounded-md focus:border-blue-600"
+            className="outline-none border border-gray-400 px-5 py-2 rounded-md focus:border-blue-600"
           />
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>4. Interview Time</label>
         <div>
           <input
@@ -52,18 +52,18 @@ const StepD = ({
             name="interviewtime"
             value={formData.interviewtime}
             onChange={(e) => handleChangeInput(e)}
-            className="outline-none border border-gray-400 px-5 py-2.5 rounded-md focus:border-blue-600"
+            className="outline-none border border-gray-400 px-5 py-2 rounded-md focus:border-blue-600"
           />
         </div>
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>5. Time Zone</label>
         <select
           type="text"
           name="timezone"
           value={formData.timezone}
           onChange={(e) => handleChangeInput(e)}
-          className="w-full outline-none border bg-white border-gray-400 px-5 py-2.5 rounded-md focus:border-blue-600"
+          className="w-full outline-none border bg-white border-gray-400 px-5 py-2 rounded-md focus:border-blue-600"
         >
           <option value="" disabled>
             Search or Select a time zone from below
@@ -72,14 +72,14 @@ const StepD = ({
           <option value="PST">Pacific Standard Time (PST)</option>
         </select>
       </div>
-      <div className="mb-10">
+      <div className="mb-8">
         <label>6. Interview Medium</label>
         <select
           type="text"
           name="interviewmedium"
           value={formData.interviewmedium}
           onChange={(e) => handleChangeInput(e)}
-          className="w-full outline-none border bg-white border-gray-400 px-5 py-2.5 rounded-md focus:border-blue-600"
+          className="w-full outline-none border bg-white border-gray-400 px-5 py-2 rounded-md focus:border-blue-600"
         >
           <option value="" disabled>
             Search or Select medium of Interview from below
